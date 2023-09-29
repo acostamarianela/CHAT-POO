@@ -26,10 +26,12 @@ def enviarMensaje():
         mensaje = Mensaje(mensajeTexto, 'en proceso') 
         # Envía el mensaje a través del usuario
         usuario.enviarMensaje(mensaje, socketio)
+    # Redirecciona a la ruta 'chat' en la aplicación Flask
     response = make_response(redirect(url_for('chat')))
+    # Establece un encabezado para permitir el acceso a la red privada.
+    #Necesario para ciertas configuraciones de red y seguridad, y poder utilizar la aplicacion en la nube.
     response.headers['Access-Control-Allow-Private-Network'] = 'true'
     return response
-
 
 # Ruta principal que renderiza la página de chat
 @app.route('/')
