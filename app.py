@@ -23,7 +23,7 @@ def enviarMensaje():
 
         usuario = Usuario(nombre) # Crear una instancia de Usuario con el nombre
         # Crear una instancia de Mensaje, con el contenido del texto obtenido y con el estado de que se encuentra en el servidor
-        mensaje = Mensaje(mensajeTexto, 'en servidor') 
+        mensaje = Mensaje(mensajeTexto, 'en proceso') 
         # Envía el mensaje a través del usuario
         usuario.enviarMensaje(mensaje, socketio)
     response = make_response(redirect(url_for('chat')))
