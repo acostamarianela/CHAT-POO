@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Inclusión de la biblioteca Axios para manejar solicitudes HTTP -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Inclusión de la hoja de estilo CSS para la apariencia del chat -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}" />
+    <!-- Inclusión de la biblioteca Socket.IO para la comunicación en tiempo real -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+     <!-- Inclusión del archivo JavaScript que maneja la lógica del chat -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <title>Flask-SocketIO-Chat</title>
+  </head>
+  <body>
+    <h1>Aplicación de chat </h1>
+    <!-- Área de texto donde se mostrarán los mensajes del chat -->
+    <textarea id="chat" cols="80" rows="10"></textarea><br><br>
+    <!-- Formulario para enviar mensajes -->
+    <form id="mensajeForm" action="#" method="post">
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required />
+      <input id="mensaje" name="mensaje" placeholder="Ingrese un mensaje" />
+      <button type="submit" id="enviarBoton">Enviar</button>
+    </form>
+  </body>
+</html>

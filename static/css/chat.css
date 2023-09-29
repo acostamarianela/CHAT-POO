@@ -1,0 +1,38 @@
+/* Estilos para el cuerpo del documento */
+body { 
+    font-family: Arial, sans-serif; /* Fuente para el texto del cuerpo */
+}
+/* Estilos para todos los botones */
+button {
+    /* Estilos comunes para todos los botones */
+    background-color: #297fb933;; /* Color de fondo para botones */
+    color: #000000; /* Color del texto en botones */
+    border: none; /* Sin borde en botones */
+    padding: 10px 20px;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    border-radius: 4px; /* Bordes redondeados en botones */
+    transition: background-color 0.3s, color 0.3s /* Transición de color de fondo y texto en 0.3 segundos */
+}
+button:hover {
+    background-color: #2980b9; /* Color de fondo al pasar el mouse */
+    color: #ffffff; /* Color de texto al pasar el mouse */
+}
+
+/* Estilos para los elementos de entrada de texto */
+input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#chat {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none; /* Evita que se pueda redimensionar el textarea */
+    font-family: Arial, sans-serif;
+}
