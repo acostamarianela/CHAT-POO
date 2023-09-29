@@ -12,6 +12,11 @@ Para ejecutar la aplicación, se deben tener instalados los siguientes component
 - Flask: Instalar usando pip (`pip install Flask`)
 - Flask-SocketIO: Instalar usando pip (`pip install Flask-SocketIO`)
 
+⚠️IMPORTANTE⚠️
+Si se desea utilizar la aplicación utilizando localhost, se debe copiar el link de 'http://localhost:5000' en
+la linea 10 'socket = io.connect("https://m51ghldl-5000.brs.devtunnels.ms/");' del archivo chat.js que se encuentra en la carpeta static/js.
+Si se desea realizar una conexión con la nube a través de los puertos (la opción de PORTS de VSC), se debe cambiar el enlace de localhost por el enlace generado, en el parámetro de io.connect. 
+
 El proyecto se organiza de la siguiente manera:
 
 - `app`: Contiene la lógica principal de la aplicación de chat.
@@ -19,3 +24,5 @@ El proyecto se organiza de la siguiente manera:
 - `claseUsuario`: Plantilla para los usuarios que utilizan la aplicación, además de sus atributos y métodos propios.
 - `templates/`: Almacena la plantilla HTML utilizada.
 - `static/`: Contiene archivos estáticos como hojas de estilo (CSS), JavaScript, para dar estilo y funcionalidad a la aplicación.
+
+
